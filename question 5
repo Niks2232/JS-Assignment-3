@@ -1,0 +1,11 @@
+function correctfn(string, wrong, correct) {
+    let regex = new RegExp(wrong, 'g');
+    return string.replace(regex, correct);
+}
+
+let sentence = "I love my coutry. My coutry is beautiful.";
+let wrongWord = "coutry";
+let correctWord = "country";
+
+let correctedSentence = correctfn(sentence, wrongWord, correctWord);
+console.log(correctedSentence);  // Output: "I love my country. My country is beautiful."
