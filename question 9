@@ -1,0 +1,14 @@
+function countWords(paragraph) {
+   
+    let wordsArray = paragraph.split(/\s+/);
+    
+   
+    wordsArray = wordsArray.filter(word => word !== '');
+
+    
+    return wordsArray.length;
+}
+
+
+let paragraph = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.";
+console.log(countWords(paragraph));  // Output: 19
