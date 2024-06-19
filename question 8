@@ -1,0 +1,21 @@
+function repeatedSumOfDigits(number) {
+    
+    function sumOfDigits(num) {
+        return num.toString().split('').reduce((acc, digit) => acc + parseInt(digit), 0);
+    }
+
+    
+    let sum = sumOfDigits(number);
+
+    
+    while (sum >= 10) {
+        sum = sumOfDigits(sum);
+    }
+
+    return sum;
+}
+
+
+console.log(repeatedSumOfDigits(456));  // Output: 6
+console.log(repeatedSumOfDigits(999));  // Output: 9
+console.log(repeatedSumOfDigits(123456789));  // Output: 9
