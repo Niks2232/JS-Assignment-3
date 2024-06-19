@@ -1,0 +1,23 @@
+let string = "The quick brown fox jumps over the lazy dog";
+
+let lowerCaseString = string.toLowerCase();
+
+const vowels = ['a', 'e', 'i', 'o', 'u'];
+
+
+let consonantCount = 0;
+
+for (let char of lowerCaseString) {
+    if (char >= 'a' && char <= 'z') {
+        if (vowels.includes(char)) {
+            vowelCount++;
+        } else {
+            consonantCount++;
+        }
+    }
+}
+
+
+console.log(`Number of vowels: ${vowelCount}`);
+console.log(`Number of consonants: ${consonantCount}`);
+
