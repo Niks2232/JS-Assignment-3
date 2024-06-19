@@ -1,0 +1,11 @@
+let string = 'INDIA';
+
+let charArray = string.split('');
+
+charArray.splice(-1, 1);
+
+charArray.splice(charArray.length, 0, 'O', 'N', 'E', 'S', 'I', 'A');
+
+let resultString = charArray.join('');
+
+console.log(resultString);  // Output: 'INDONESIA'
